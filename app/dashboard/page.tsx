@@ -32,7 +32,7 @@ const page = async () => {
       </div>
       {/* display all user pods */}
       {pods && pods?.length !== 0 ? (
-        <ul className='mt-8 grid grid-cols-1 gap-6 divide-y md:grid-cols-2 lg:grid-cols-3'>
+        <ul className='mt-8 my-24 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
           {pods
             .sort(
               (a, b) =>
@@ -43,7 +43,7 @@ const page = async () => {
              (
               <Card
                 key={file.id}
-                className='col-span-1 divide-y rounded-lgshadow transition hover:shadow-lg'>
+                className='col-span-1 divide-y rounded-lg shadow transition hover:shadow-lg'>
                 <Link
                   href={`/pods/${file.id}`}
                   className='flex flex-col gap-2'>
@@ -69,7 +69,7 @@ const page = async () => {
                   </div>
 
                   <div className='flex items-center gap-2'>
-                    <BadgeCheck className='h-4 w-4' />
+                    <BadgeCheck className='h-4 w-4 animate-pulse' />
                       Connected
                   </div>
 
